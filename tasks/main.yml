@@ -1,0 +1,47 @@
+---
+# tasks file for ansible-common-utilities
+
+- block:
+    - name: Install htop
+      apt:
+        name: htop
+        cache_valid_time: "{{ apt_cache_valid_time|default(omit) }}"
+        install_recommends: no
+        state: latest
+        update_cache: yes
+
+    - name: Install python-software-properties
+      apt:
+        name: python-software-properties
+        cache_valid_time: "{{ apt_cache_valid_time|default(omit) }}"
+        install_recommends: no
+        state: latest
+        update_cache: yes
+
+    - name: Install realpath
+      apt:
+        name: realpath
+        cache_valid_time: "{{ apt_cache_valid_time|default(omit) }}"
+        install_recommends: no
+        state: latest
+        update_cache: yes
+
+    - name: Install tree
+      apt:
+        name: tree
+        cache_valid_time: "{{ apt_cache_valid_time|default(omit) }}"
+        install_recommends: no
+        state: latest
+        update_cache: yes
+
+    - name: Install vim
+      apt:
+        name: vim
+        cache_valid_time: "{{ apt_cache_valid_time|default(omit) }}"
+        install_recommends: no
+        state: latest
+        update_cache: yes
+  become: yes
+  become_method: sudo
+  tags:
+  - common

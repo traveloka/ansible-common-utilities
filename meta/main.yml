@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  description: Default software and utilities installed on all servers.
+  company: Traveloka
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+  categories:
+  - system
+dependencies: []
