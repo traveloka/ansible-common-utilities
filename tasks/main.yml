@@ -52,7 +52,7 @@
     
     - name: ensure host is installed
       apt:
-        name: host
+        name: bind9-host
         cache_valid_time: "{{ apt_cache_valid_time|default(omit) }}"
         install_recommends: no
         state: latest
