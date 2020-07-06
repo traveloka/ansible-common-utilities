@@ -17,6 +17,18 @@
         install_recommends: no
         state: latest
         update_cache: yes
+      when: ansible_distribution_version is version_compare('16.04', '<=')
+
+
+    - name: Install python3-software-properties
+      apt:
+        name: python3-software-properties
+        cache_valid_time: "{{ apt_cache_valid_time|default(omit) }}"
+        install_recommends: no
+        state: latest
+        update_cache: yes
+      when: ansible_distribution_version is version_compare('20.04', '>=')
+
 
     - name: Install realpath
       apt:
