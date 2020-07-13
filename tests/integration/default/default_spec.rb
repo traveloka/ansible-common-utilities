@@ -9,8 +9,8 @@ describe package('python-software-properties') do
   it { should be_installed }
 end
 
-describe package('realpath') do
-  it { should be_installed }
+describe command('realpath') do
+  it { should exist }
 end
 
 describe package('tree') do
